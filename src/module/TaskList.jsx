@@ -1,12 +1,12 @@
 import React, { useEffect, useState } from 'react';
 import axios from 'axios';
 import TaskItem from './TaskItem';
-axios.defaults.baseURL = 'http://localhost:10000/api/v1/mail';
+
 const TaskList = () => {
     const [tasks, setTasks] = useState([]);
     const [loading, setLoading] = useState(true);
     const [error, setError] = useState(null);
-    axios.defaults.baseURL = 'http://localhost:10000/api/v1/mail';
+    axios.defaults.baseURL = 'https://fswd-be.onrender.com/api/v1/mail';
     useEffect(() => {
         const fetchTasks = async () => {
             try {
