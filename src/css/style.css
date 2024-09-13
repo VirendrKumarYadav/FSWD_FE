@@ -5,21 +5,21 @@ body {
   font-family: Arial, sans-serif;
   margin: 0;
   padding: 0;
-  background-color: #e9ecef; /* Light gray background */
+  background-color: #e9ecef; 
 }
 
 /* Add Task Form Styles */
 .add-task-form {
-  background-color: #ffffff; /* White background for the form */
-  padding: 30px; /* Increased padding for a larger form */
-  border-radius: 8px; /* Rounded corners */
-  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1); /* Shadow for depth */
-  margin: 20px auto; /* Center the form */
-  max-width: 600px; /* Max width for the form */
+  background-color: #ffffff; 
+  padding: 30px; 
+  border-radius: 8px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1); 
+  margin: 20px auto;
+  max-width: 600px; 
 }
 
 .form-input {
-  width: 100%;
+  width: 90%;
   padding: 15px; /* Increased padding for larger input fields */
   margin-bottom: 15px; /* Margin for spacing */
   border: 1px solid #ccc;
