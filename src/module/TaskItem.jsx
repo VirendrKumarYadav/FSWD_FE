@@ -1,8 +1,9 @@
 import React from 'react';
 import axios from 'axios';
+import '../css/style.css'; 
 
 const TaskItem = ({ task }) => {
-    axios.defaults.baseURL = 'http://localhost:10000/api/v1/mail';
+    axios.defaults.baseURL = 'https://fswd-be.onrender.com/api/v1/mail';
     const handleStop = async () => {
         try {
             await axios.patch('/stop', { displayName: task.displayName });
@@ -35,12 +36,14 @@ const TaskItem = ({ task }) => {
 
     return (
         <li className="task-item">
-            <h3>{task.displayName}</h3>
-            <p>Schedule: {task.schedule}</p>
-            <p>Status: {task.status}</p>
-            <button onClick={handleStop}>Stop</button>
-            <button onClick={handleRestart}>Restart</button>
-            <button onClick={handleDelete}>Delete</button>
+            <h3 className="task-name">{task.displayName}</h3>
+            <p className="task-info">Schedule: {task.schedule}</p>
+            <p className="task-info">Status: {task.status}</p>
+            <div className="task-actions">
+                <button onClick={handleStop} className="action-button">Stop</button>
+                <button onClick={handleRestart} className="action-button">Restart</button>
+                <button onClick={handleDelete} className="action-button">Delete</button>
+            </div>
         </li>
     );
 };

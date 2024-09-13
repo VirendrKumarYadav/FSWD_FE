@@ -1,12 +1,13 @@
 import React, { useState } from 'react';
 import axios from 'axios';
+import '../css/style.css'; // Import the CSS file
 
 const AddTask = () => {
     const [displayName, setDisplayName] = useState('');
     const [schedule, setSchedule] = useState('');
     const [message, setMessage] = useState('');
     const [to, setTo] = useState('');
-    axios.defaults.baseURL = 'http://localhost:10000/api/v1/mail';
+    axios.defaults.baseURL = 'https://fswd-be.onrender.com/api/v1/mail';
     
     const handleSubmit = async (e) => {
         e.preventDefault();
@@ -37,6 +38,7 @@ const AddTask = () => {
                 value={displayName}
                 onChange={(e) => setDisplayName(e.target.value)}
                 required
+                className="form-input"
             />
             <input
                 type="text"
@@ -44,6 +46,7 @@ const AddTask = () => {
                 value={schedule}
                 onChange={(e) => setSchedule(e.target.value)}
                 required
+                className="form-input"
             />
             <input
                 type="text"
@@ -51,6 +54,7 @@ const AddTask = () => {
                 value={message}
                 onChange={(e) => setMessage(e.target.value)}
                 required
+                className="form-input"
             />
             <input
                 type="email"
@@ -58,8 +62,9 @@ const AddTask = () => {
                 value={to}
                 onChange={(e) => setTo(e.target.value)}
                 required
+                className="form-input"
             />
-            <button type="submit">Add Task</button>
+            <button type="submit" className="submit-button">Add Task</button>
         </form>
     );
 };
